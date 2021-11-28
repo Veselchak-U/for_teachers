@@ -2,18 +2,19 @@ class Config {
   Config._();
 
   static Config? _instance;
+
   // ignore: prefer_constructors_over_static_methods
   static Config getInstance() {
     _instance ??= Config._();
     return _instance!;
   }
 
-  final termsOfUseUrl = 'https://teacher.mos/terms-of-service';
-  final privacyPolicyUrl = 'https://teacher.mos/privacy-policy';
+  final termsOfUseUrl = 'https://teacher.mos.ru/terms-of-service';
+  final privacyPolicyUrl = 'https://teacher.mos.ru/privacy-policy';
 
-  final _devUrl = 'https://api.dev.teacher.mos';
-  final _stageUrl = 'https://api.stage.teacher.mos';
-  final _prodUrl = 'https://api.teacher.mos';
+  final _devUrl = 'https://api.dev.teacher.mos.ru';
+  final _stageUrl = 'https://api.stage.teacher.mos.ru';
+  final _prodUrl = 'https://api.teacher.mos.ru';
 
   String? get baseUrl {
     const envLabel = 'prod'; //DI.instance.userPref().env.get();

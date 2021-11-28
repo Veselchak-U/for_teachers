@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:mos_teacher/counter/counter.dart';
+import 'package:mos_teacher/features/main_scene/main_scene.dart';
 import 'package:mos_teacher/l10n/l10n.dart';
 
-class CounterPage extends StatelessWidget {
-  const CounterPage({Key? key}) : super(key: key);
+class MainScene extends StatelessWidget {
+  const MainScene({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (_) => CounterCubit(),
-      child: const CounterView(),
+      child: const MainView(),
     );
   }
 }
 
-class CounterView extends StatelessWidget {
-  const CounterView({Key? key}) : super(key: key);
+class MainView extends StatelessWidget {
+  const MainView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
