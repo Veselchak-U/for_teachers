@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mos_teacher/features/main_scene/main_scene.dart';
-import 'package:mos_teacher/l10n/l10n.dart';
 
 class MainScene extends StatelessWidget {
   const MainScene({Key? key}) : super(key: key);
@@ -20,9 +19,8 @@ class MainView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final l10n = context.l10n;
     return Scaffold(
-      appBar: AppBar(title: Text(l10n.counterAppBarTitle)),
+      appBar: AppBar(title: const Text('Counter')),
       body: const Center(child: CounterText()),
       floatingActionButton: Column(
         mainAxisAlignment: MainAxisAlignment.end,
