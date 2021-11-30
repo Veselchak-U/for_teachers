@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mos_teacher/app/navigator/route_generator.dart';
+import 'package:mos_teacher/app/theme/app_theme.dart';
 import 'package:mos_teacher/app/theme/light_theme.dart';
 import 'package:mos_teacher/app/view/error_screen.dart';
 import 'package:mos_teacher/app/view/splash_screen.dart';
@@ -41,9 +42,17 @@ class AppState extends State<App> {
     if (progress == true) {
       return const SplashScreen();
     }
-    return MaterialApp(
-      theme: LightTheme.theme,
+
+    final AppTheme appTheme = LightTheme();
+    final Widget app = MaterialApp(
+      theme: appTheme.theme,
       onGenerateRoute: RouteGenerator.onGenerateRoute,
+    );
+
+    // application theme
+    return AppThemeWidget(
+      appTheme: appTheme,
+      child: app,
     );
   }
 }
