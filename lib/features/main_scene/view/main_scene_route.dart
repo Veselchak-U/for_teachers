@@ -1,5 +1,5 @@
-class CounterRoute {
-  static const name = 'counter';
+class MainRoute {
+  static const name = 'MainRoute';
 }
 
-class CounterScreenArgs {}
+class MainRouteArgs {}
