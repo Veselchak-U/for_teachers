@@ -6,16 +6,32 @@ class LightTheme implements AppTheme {
   @override
   ThemeData get theme => ThemeData(
         brightness: Brightness.light,
-        appBarTheme: const AppBarTheme(color: _bluePrimrose80),
-        primaryColorLight: _figGreen60,
-        colorScheme: ColorScheme.fromSwatch(
-          accentColor: const Color(0xFF13B9FF),
-        ),
+        primaryColor: _bluePrimroseMain,
+        primaryColorLight: _bluePrimroseMain04,
+        primaryColorDark: _bluePrimrose80,
+        backgroundColor: _firstSnow,
+        dialogBackgroundColor: _firstSnow,
+        scaffoldBackgroundColor: _oldAsphalt10,
         fontFamily: 'Lato',
+        // textTheme: AppTextTheme.defaultTextTheme,
       );
 
   @override
   AppTextTheme get text => AppTextTheme();
+
+  @override
+  LinkButtonColors get linkButtonColors => LinkButtonColors(
+        text: _oldAsphalt30,
+        background: _linkButton,
+        arrow: _oldAsphalt40,
+      );
+
+  @override
+  LoginButtonColors get loginButtonColors => LoginButtonColors(
+        text: _oldAsphalt80,
+        background: _firstSnow,
+        arrow: _oldAsphalt40,
+      );
 
   // @override
   // IconColorGroup get icon => IconColorGroup(
@@ -57,25 +73,25 @@ class LightTheme implements AppTheme {
   static const _figGreen20 = Color(0xFFEBF8EA);
   static const _figGreen40 = Color(0xFF84D682);
   static const _figGreen60 = Color(0xFF318C2E);
-  static const _atoms = Color.fromRGBO(244, 243, 248, 0.1);
-  static const _linkButton = Color.fromRGBO(255, 255, 255, 0.1);
   static const _orangeSunsetMain = Color(0xFFF2A657);
   static const _orangeSunset20 = Color(0xFFFEF6EE);
   static const _orangeSunset60 = Color(0xFFED861A);
-  static const _withBg = Color(0xFFEFF6FF);
-  static const _action = Color.fromRGBO(255, 255, 255, 0.15);
   static const _redRoseMain = Color(0xFFCC2A35);
   static const _redRose20 = Color(0xFFFBE9EA);
   static const _redRose40 = Color(0xFFE47B83);
   static const _redRose60 = Color(0xFFA3212A);
   static const _amethystStarlingMain = Color(0xFF7A229B);
   static const _amethystStarling40 = Color(0xFFBB61DC);
-  static const _cover3FileTypes = Color(0xFF0096E6);
   static const _bageRectangleIconAtom = Color.fromRGBO(255, 107, 107, 0.3);
   static const _bageRectangleWithDdlAtomGreen =
       Color.fromRGBO(105, 190, 103, 0.6);
   static const _bageRectangleWithDdlAtomRed =
       Color.fromRGBO(236, 106, 106, 0.6);
+  static const _atoms = Color.fromRGBO(244, 243, 248, 0.1);
+  static const _linkButton = Color.fromRGBO(255, 255, 255, 0.1);
+  static const _action = Color.fromRGBO(255, 255, 255, 0.15);
+  static const _withBg = Color(0xFFEFF6FF);
+  static const _cover3FileTypes = Color(0xFF0096E6);
 
   // text
   static const _oldAsphaltMain = Color(0xFF7B819B);
@@ -89,5 +105,4 @@ class LightTheme implements AppTheme {
   // icons
   static const _avatarBlue = Color(0xFF69ACFF);
   static const _avatarRed = Color(0xFFFF6B6B);
-
 }

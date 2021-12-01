@@ -9,8 +9,9 @@ class Config {
     return _instance!;
   }
 
-  final termsOfUseUrl = 'https://teacher.mos.ru/terms-of-service';
-  final privacyPolicyUrl = 'https://teacher.mos.ru/privacy-policy';
+  final helpUrl = 'https://yandex.ru';
+  final termsOfUseUrl = 'https://yandex.ru';
+  final privacyPolicyUrl = 'https://yandex.ru';
 
   final _devUrl = 'https://api.dev.teacher.mos.ru';
   final _stageUrl = 'https://api.stage.teacher.mos.ru';

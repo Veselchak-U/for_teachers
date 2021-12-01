@@ -10,13 +10,13 @@ class MainScene extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (_) => CounterCubit(),
-      child: const MainView(),
+      child: const MainSceneView(),
     );
   }
 }
 
-class MainView extends StatelessWidget {
-  const MainView({Key? key}) : super(key: key);
+class MainSceneView extends StatelessWidget {
+  const MainSceneView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,7 @@ class MainView extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           'Счётчик',
-          style: text.s16w7,
+          style: text.s16w7h24,
         ),
         backgroundColor: theme.primaryColorLight,
       ),
