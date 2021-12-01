@@ -21,6 +21,10 @@ abstract class AppTheme {
 
   AppTextTheme get text;
 
+  LinkButtonColors get linkButtonColors;
+
+  LoginButtonColors get loginButtonColors;
+
   // IconColorGroup get icon;
 
   static AppTheme of(BuildContext context) {
@@ -28,6 +32,30 @@ abstract class AppTheme {
         .dependOnInheritedWidgetOfExactType<AppThemeWidget>()!
         .appTheme;
   }
+}
+
+class LinkButtonColors {
+  LinkButtonColors({
+    required this.text,
+    required this.background,
+    required this.arrow,
+  });
+
+  final Color text;
+  final Color background;
+  final Color arrow;
+}
+
+class LoginButtonColors {
+  LoginButtonColors({
+    required this.text,
+    required this.background,
+    required this.arrow,
+  });
+
+  final Color text;
+  final Color background;
+  final Color arrow;
 }
 
 // class IconColorGroup {

@@ -10,17 +10,27 @@ dependencies:
   bloc: ^8.0.1
   flutter:
     sdk: flutter
+  # state
   flutter_bloc: ^8.0.0
+  equatable: ^2.0.3
+  # ui
+  flutter_svg: ^0.23.0+1
+  # services
+  url_launcher: ^6.0.17
 
 dev_dependencies:
   bloc_test: ^9.0.1
   flutter_test:
     sdk: flutter
   mocktail: ^0.2.0
+  # linter
   very_good_analysis: ^2.4.0
 
 flutter:
   uses-material-design: true
+  assets:
+    - res/image/png/
+    - res/image/svg/
   fonts:
     - family: Lato
       fonts:
