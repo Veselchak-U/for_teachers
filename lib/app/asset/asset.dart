@@ -8,6 +8,7 @@ class _Png {
   final iconLoginButton = '${_path}icon_login_button.png';
   final loginBackground = '${_path}login_background.png';
   final welcomeBackground = '${_path}welcome_background.png';
+  final rejectBackground = '${_path}reject_background.png';
 }
 
 class _Svg {

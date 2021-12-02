@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:mos_teacher/app/navigator/route_helper.dart';
 import 'package:mos_teacher/features/auth/login/view/login_screen.dart';
 import 'package:mos_teacher/features/auth/login/view/login_screen_route.dart';
+import 'package:mos_teacher/features/auth/reject/view/reject_screen.dart';
+import 'package:mos_teacher/features/auth/reject/view/reject_screen_route.dart';
 import 'package:mos_teacher/features/auth/welcome/view/welcome_screen.dart';
 import 'package:mos_teacher/features/auth/welcome/view/welcome_screen_route.dart';
 import 'package:mos_teacher/features/main_scene/view/main_scene.dart';
@@ -33,6 +35,15 @@ class RouteGenerator {
             arguments: settings.arguments,
           ),
           builder: (_) => const WelcomeScreen(),
+        );
+
+      case RejectRoute.name:
+        return MaterialPageRoute<PageRoute>(
+          settings: RouteSettings(
+            name: settings.name,
+            arguments: settings.arguments,
+          ),
+          builder: (_) => const RejectScreen(),
         );
 
       case MainRoute.name:

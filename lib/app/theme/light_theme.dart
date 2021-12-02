@@ -54,6 +54,18 @@ class LightTheme implements AppTheme {
         disabled: _oldAsphaltMain,
       );
 
+  @override
+  MtButtonColors get primaryButtonColors => MtButtonColors(
+        background: _bluePrimroseMain,
+        text: _firstSnow,
+      );
+
+  @override
+  MtButtonColors get transparentButtonColors => MtButtonColors(
+        background: _transparentButton,
+        text: _oldAsphalt10,
+      );
+
   // @override
   // IconColorGroup get icon => IconColorGroup(
   //   primary: IconColor(
@@ -108,7 +120,7 @@ class LightTheme implements AppTheme {
       Color.fromRGBO(105, 190, 103, 0.6);
   static const _bageRectangleWithDdlAtomRed =
       Color.fromRGBO(236, 106, 106, 0.6);
-  static const _atoms = Color.fromRGBO(244, 243, 248, 0.1);
+  static const _transparentButton = Color.fromRGBO(244, 243, 248, 0.1);
   static const _linkButton = Color.fromRGBO(255, 255, 255, 0.1);
   static const _action = Color.fromRGBO(255, 255, 255, 0.15);
   static const _withBg = Color(0xFFEFF6FF);
