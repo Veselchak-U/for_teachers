@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:mos_teacher/app/navigator/route_generator.dart';
 import 'package:mos_teacher/app/theme/app_theme.dart';
 import 'package:mos_teacher/app/theme/light_theme.dart';
@@ -46,6 +47,12 @@ class AppState extends State<App> {
     final AppTheme appTheme = LightTheme();
     final Widget app = MaterialApp(
       theme: appTheme.theme,
+      locale: const Locale('ru', 'RU'),
+      localizationsDelegates: const [
+        GlobalMaterialLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: const [Locale('ru', 'RU')],
       onGenerateRoute: RouteGenerator.onGenerateRoute,
     );
 
