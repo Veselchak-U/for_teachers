@@ -57,9 +57,9 @@ class _LoginViewState extends State<LoginView> {
     ScaffoldMessenger.of(context).showSnackBar(snackBar);
   }
 
-  void _feedback() {
+  void _support() {
     // TODO(du): implement
-    log('_feedback');
+    log('_support');
   }
 
   Future<void> _help() async {
@@ -104,7 +104,7 @@ class _LoginViewState extends State<LoginView> {
                       LinkButton(
                         svgAsset: Asset.svg.iconMessageCircle,
                         text: 'Написать нам',
-                        onTap: _feedback,
+                        onTap: _support,
                       ),
                       const SizedBox(height: 12),
                       LinkButton(

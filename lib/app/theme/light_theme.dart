@@ -20,17 +20,38 @@ class LightTheme implements AppTheme {
   AppTextTheme get text => AppTextTheme();
 
   @override
-  LinkButtonColors get linkButtonColors => LinkButtonColors(
+  MtLinkButtonColors get linkButtonColors => MtLinkButtonColors(
         text: _oldAsphalt30,
         background: _linkButton,
         arrow: _oldAsphalt40,
       );
 
   @override
-  LoginButtonColors get loginButtonColors => LoginButtonColors(
+  MtLoginButtonColors get loginButtonColors => MtLoginButtonColors(
         text: _oldAsphalt80,
         background: _firstSnow,
         arrow: _oldAsphalt40,
+      );
+
+  @override
+  MtImageColors get imageColors => MtImageColors(
+        progress: _oldAsphalt10,
+        disabled: _oldAsphalt40,
+      );
+
+  @override
+  MtTextLightColors get textLightColors => MtTextLightColors(
+        white: _firstSnow,
+        white10: _oldAsphalt10,
+        white20: _oldAsphalt20,
+        white30: _oldAsphalt30,
+        blue20: _bluePrimrose20,
+      );
+
+  @override
+  MtTextDarkColors get textDarkColors => MtTextDarkColors(
+        primary: _oldAsphalt80,
+        disabled: _oldAsphaltMain,
       );
 
   // @override

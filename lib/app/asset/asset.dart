@@ -7,6 +7,7 @@ class _Png {
   static const _path = 'res/image/png/';
   final iconLoginButton = '${_path}icon_login_button.png';
   final loginBackground = '${_path}login_background.png';
+  final welcomeBackground = '${_path}welcome_background.png';
 }
 
 class _Svg {

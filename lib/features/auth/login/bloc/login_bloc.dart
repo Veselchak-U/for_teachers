@@ -8,11 +8,12 @@ part 'login_event.dart';
 part 'login_state.dart';
 
 class LoginBloc extends Bloc<LoginEvent, LoginState> {
-  LoginBloc() : super(LoginInitial()) {
+  LoginBloc() : super(LoginStateInitial()) {
+
     on<LoginEventEnter>((event, emit) async {
       emit(LoginStateProgress());
       try {
-        await Future<void>.delayed(const Duration(seconds: 2));
+        await Future<void>.delayed(const Duration(seconds: 1));
         // throw 'Something wrong';
         emit(LoginStateSuccess());
       } catch (err) {
