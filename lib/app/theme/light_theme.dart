@@ -20,17 +20,50 @@ class LightTheme implements AppTheme {
   AppTextTheme get text => AppTextTheme();
 
   @override
-  LinkButtonColors get linkButtonColors => LinkButtonColors(
+  MtLinkButtonColors get linkButtonColors => MtLinkButtonColors(
         text: _oldAsphalt30,
         background: _linkButton,
         arrow: _oldAsphalt40,
       );
 
   @override
-  LoginButtonColors get loginButtonColors => LoginButtonColors(
+  MtLoginButtonColors get loginButtonColors => MtLoginButtonColors(
         text: _oldAsphalt80,
         background: _firstSnow,
         arrow: _oldAsphalt40,
+      );
+
+  @override
+  MtImageColors get imageColors => MtImageColors(
+        progress: _oldAsphalt10,
+        disabled: _oldAsphalt40,
+      );
+
+  @override
+  MtTextLightColors get textLightColors => MtTextLightColors(
+        white: _firstSnow,
+        white10: _oldAsphalt10,
+        white20: _oldAsphalt20,
+        white30: _oldAsphalt30,
+        blue20: _bluePrimrose20,
+      );
+
+  @override
+  MtTextDarkColors get textDarkColors => MtTextDarkColors(
+        primary: _oldAsphalt80,
+        disabled: _oldAsphaltMain,
+      );
+
+  @override
+  MtButtonColors get primaryButtonColors => MtButtonColors(
+        background: _bluePrimroseMain,
+        text: _firstSnow,
+      );
+
+  @override
+  MtButtonColors get transparentButtonColors => MtButtonColors(
+        background: _transparentButton,
+        text: _oldAsphalt10,
       );
 
   // @override
@@ -87,7 +120,7 @@ class LightTheme implements AppTheme {
       Color.fromRGBO(105, 190, 103, 0.6);
   static const _bageRectangleWithDdlAtomRed =
       Color.fromRGBO(236, 106, 106, 0.6);
-  static const _atoms = Color.fromRGBO(244, 243, 248, 0.1);
+  static const _transparentButton = Color.fromRGBO(244, 243, 248, 0.1);
   static const _linkButton = Color.fromRGBO(255, 255, 255, 0.1);
   static const _action = Color.fromRGBO(255, 255, 255, 0.15);
   static const _withBg = Color(0xFFEFF6FF);

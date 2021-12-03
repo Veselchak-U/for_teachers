@@ -21,9 +21,19 @@ abstract class AppTheme {
 
   AppTextTheme get text;
 
-  LinkButtonColors get linkButtonColors;
+  MtLinkButtonColors get linkButtonColors;
 
-  LoginButtonColors get loginButtonColors;
+  MtLoginButtonColors get loginButtonColors;
+
+  MtImageColors get imageColors;
+
+  MtTextLightColors get textLightColors;
+
+  MtTextDarkColors get textDarkColors;
+
+  MtButtonColors get primaryButtonColors;
+
+  MtButtonColors get transparentButtonColors;
 
   // IconColorGroup get icon;
 
@@ -34,8 +44,56 @@ abstract class AppTheme {
   }
 }
 
-class LinkButtonColors {
-  LinkButtonColors({
+class MtButtonColors {
+  MtButtonColors({
+    required this.background,
+    required this.text,
+    this.border,
+  });
+
+  final Color background;
+  final Color text;
+  final Color? border;
+}
+
+class MtTextLightColors {
+  MtTextLightColors({
+    required this.white,
+    required this.white10,
+    required this.white20,
+    required this.white30,
+    required this.blue20,
+  });
+
+  final Color white;
+  final Color white10;
+  final Color white20;
+  final Color white30;
+  final Color blue20;
+}
+
+class MtTextDarkColors {
+  MtTextDarkColors({
+    required this.primary,
+    required this.disabled,
+  });
+
+  final Color primary;
+  final Color disabled;
+}
+
+class MtImageColors {
+  MtImageColors({
+    required this.progress,
+    required this.disabled,
+  });
+
+  final Color progress;
+  final Color disabled;
+}
+
+class MtLinkButtonColors {
+  MtLinkButtonColors({
     required this.text,
     required this.background,
     required this.arrow,
@@ -46,8 +104,8 @@ class LinkButtonColors {
   final Color arrow;
 }
 
-class LoginButtonColors {
-  LoginButtonColors({
+class MtLoginButtonColors {
+  MtLoginButtonColors({
     required this.text,
     required this.background,
     required this.arrow,

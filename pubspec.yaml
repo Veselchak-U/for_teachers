@@ -10,11 +10,15 @@ dependencies:
   bloc: ^8.0.1
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.17.0
   # state
   flutter_bloc: ^8.0.0
   equatable: ^2.0.3
   # ui
   flutter_svg: ^0.23.0+1
+  cached_network_image: ^3.2.0
   # services
   url_launcher: ^6.0.17
 
