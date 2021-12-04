@@ -14,6 +14,9 @@ class LightTheme implements AppTheme {
         scaffoldBackgroundColor: _oldAsphalt10,
         fontFamily: 'Lato',
         // textTheme: AppTextTheme.defaultTextTheme,
+        appBarTheme: const AppBarTheme(
+          elevation: 0,
+        ),
       );
 
   @override
@@ -50,8 +53,8 @@ class LightTheme implements AppTheme {
 
   @override
   MtTextDarkColors get textDarkColors => MtTextDarkColors(
-        primary: _oldAsphalt80,
-        disabled: _oldAsphaltMain,
+        black80: _oldAsphalt80,
+        main: _oldAsphaltMain,
       );
 
   @override
@@ -64,6 +67,17 @@ class LightTheme implements AppTheme {
   MtButtonColors get transparentButtonColors => MtButtonColors(
         background: _transparentButton,
         text: _oldAsphalt10,
+      );
+
+  @override
+  MtLabelColors get labelColors => MtLabelColors(
+        blue20: _bluePrimrose20,
+      );
+
+  @override
+  MtAppBarColors get appBarDarkColors => MtAppBarColors(
+        background: _bluePrimrose80,
+        text: _firstSnow,
       );
 
   // @override

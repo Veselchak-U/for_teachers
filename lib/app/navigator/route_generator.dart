@@ -6,6 +6,8 @@ import 'package:mos_teacher/features/auth/login/view/login_screen.dart';
 import 'package:mos_teacher/features/auth/login/view/login_screen_route.dart';
 import 'package:mos_teacher/features/auth/reject/view/reject_screen.dart';
 import 'package:mos_teacher/features/auth/reject/view/reject_screen_route.dart';
+import 'package:mos_teacher/features/auth/security_code/code_start/view/code_start_screen.dart';
+import 'package:mos_teacher/features/auth/security_code/code_start/view/code_start_screen_route.dart';
 import 'package:mos_teacher/features/auth/welcome/view/welcome_screen.dart';
 import 'package:mos_teacher/features/auth/welcome/view/welcome_screen_route.dart';
 import 'package:mos_teacher/features/main_scene/view/main_scene.dart';
@@ -44,6 +46,15 @@ class RouteGenerator {
             arguments: settings.arguments,
           ),
           builder: (_) => const RejectScreen(),
+        );
+
+      case CodeStartRoute.name:
+        return MaterialPageRoute<PageRoute>(
+          settings: RouteSettings(
+            name: settings.name,
+            arguments: settings.arguments,
+          ),
+          builder: (_) => const CodeStartScreen(),
         );
 
       case MainRoute.name:

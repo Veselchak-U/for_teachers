@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mos_teacher/features/auth/login/view/login_screen.dart';
 import 'package:mos_teacher/features/auth/reject/view/reject_screen.dart';
+import 'package:mos_teacher/features/auth/security_code/code_start/view/code_start_screen.dart';
 import 'package:mos_teacher/features/auth/welcome/view/welcome_screen.dart';
 
 class RouteHelper {
@@ -10,7 +11,7 @@ class RouteHelper {
         name: settings.name,
         arguments: settings.arguments,
       ),
-      builder: (_) => const RejectScreen(),
+      builder: (_) => const LoginScreen(),
     );
   }
 }

@@ -35,6 +35,10 @@ abstract class AppTheme {
 
   MtButtonColors get transparentButtonColors;
 
+  MtLabelColors get labelColors;
+
+  MtAppBarColors get appBarDarkColors;
+
   // IconColorGroup get icon;
 
   static AppTheme of(BuildContext context) {
@@ -42,6 +46,24 @@ abstract class AppTheme {
         .dependOnInheritedWidgetOfExactType<AppThemeWidget>()!
         .appTheme;
   }
+}
+
+class MtAppBarColors {
+  MtAppBarColors({
+    required this.background,
+    required this.text,
+  });
+
+  final Color background;
+  final Color text;
+}
+
+class MtLabelColors {
+  MtLabelColors({
+    required this.blue20,
+  });
+
+  final Color blue20;
 }
 
 class MtButtonColors {
@@ -74,12 +96,12 @@ class MtTextLightColors {
 
 class MtTextDarkColors {
   MtTextDarkColors({
-    required this.primary,
-    required this.disabled,
+    required this.black80,
+    required this.main,
   });
 
-  final Color primary;
-  final Color disabled;
+  final Color black80;
+  final Color main;
 }
 
 class MtImageColors {

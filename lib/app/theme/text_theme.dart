@@ -32,9 +32,10 @@ class AppTextTheme {
     fontWeight: FontWeight.w700,
     height: 32/24,
   );
-  final TextStyle s20w7 = const TextStyle(
+  final TextStyle s20w7h24 = const TextStyle(
     fontSize: 20,
     fontWeight: FontWeight.w700,
+    height: 24/20,
   );
   final TextStyle s18w7h24 = const TextStyle(
     fontSize: 18,
@@ -69,9 +70,10 @@ class AppTextTheme {
     fontSize: 14,
     fontWeight: FontWeight.w700,
   );
-  final TextStyle s14w5 = const TextStyle(
+  final TextStyle s14w5h18 = const TextStyle(
     fontSize: 14,
     fontWeight: FontWeight.w500,
+    height: 18/14,
   );
   final TextStyle s14w4 = const TextStyle(
     fontSize: 14,
