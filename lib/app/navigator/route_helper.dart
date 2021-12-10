@@ -11,7 +11,7 @@ class RouteHelper {
         name: settings.name,
         arguments: settings.arguments,
       ),
-      builder: (_) => const LoginScreen(),
+      builder: (_) => const RejectScreen(),
     );
   }
 }

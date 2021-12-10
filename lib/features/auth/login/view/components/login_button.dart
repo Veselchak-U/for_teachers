@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mos_teacher/app/asset/asset.dart';
 import 'package:mos_teacher/app/theme/app_theme.dart';
 
@@ -11,9 +12,9 @@ class LoginButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = AppTheme.of(context);
     final colors = theme.loginButtonColors;
-    final borderRadius = BorderRadius.circular(12);
+    final borderRadius = BorderRadius.circular(12.r);
     return Container(
-      height: 64,
+      height: 64.h,
       decoration: BoxDecoration(
         color: colors.background,
         borderRadius: borderRadius,
@@ -25,15 +26,15 @@ class LoginButton extends StatelessWidget {
           splashColor: Colors.white,
           borderRadius: borderRadius,
           child: Padding(
-            padding: const EdgeInsets.only(left: 16, right: 16),
+            padding: EdgeInsets.only(left: 16.r, right: 16.r),
             child: Row(
               children: [
                 Image.asset(
                   Asset.png.iconLoginButton,
-                  height: 40,
-                  width: 40,
+                  height: 40.r,
+                  width: 40.r,
                 ),
-                const SizedBox(width: 12),
+                SizedBox(width: 12.w),
                 Expanded(
                   child: RichText(
                     text: TextSpan(
@@ -49,8 +50,8 @@ class LoginButton extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(width: 16),
-                Icon(Icons.arrow_forward_ios, size: 16, color: colors.arrow),
+                SizedBox(width: 16.w),
+                Icon(Icons.arrow_forward_ios, size: 16.r, color: colors.arrow),
               ],
             ),
           ),

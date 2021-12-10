@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mos_teacher/app/theme/app_theme.dart';
 
 typedef FrameBuilder = Widget Function(
@@ -39,7 +40,7 @@ class MtImage extends StatelessWidget {
                   width: width,
                   height: height,
                   alignment: Alignment.center,
-                  child: const CircularProgressIndicator(strokeWidth: 2),
+                  child: CircularProgressIndicator(strokeWidth: 2.r),
                 )
               : child,
         );

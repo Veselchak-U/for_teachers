@@ -1,9 +1,11 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mos_teacher/app/asset/asset.dart';
 import 'package:mos_teacher/app/theme/app_theme.dart';
 import 'package:mos_teacher/app/view/components/button.dart';
+import 'package:mos_teacher/features/auth/login/view/login_screen_route.dart';
 
 class RejectScreen extends StatelessWidget {
   const RejectScreen();
@@ -25,6 +27,8 @@ class _RejectViewState extends State<RejectView> {
   void _exit() {
     // TODO(dy): implements
     log('_exit()');
+    Navigator.of(context)
+        .pushNamedAndRemoveUntil(LoginRoute.name, (route) => false);
   }
 
   void _contactUs() {
@@ -45,14 +49,17 @@ class _RejectViewState extends State<RejectView> {
             children: [
               Column(
                 children: [
-                  const SizedBox(height: 86),
+                  SizedBox(height: 86.h),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 48),
-                    child: Image.asset(Asset.png.rejectBackground),
+                    padding: EdgeInsets.symmetric(horizontal: 48.r),
+                    child: Image.asset(
+                      Asset.png.rejectBackground,
+                      width: double.infinity,
+                    ),
                   ),
-                  const SizedBox(height: 24),
+                  SizedBox(height: 24.h),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 31),
+                    padding: EdgeInsets.symmetric(horizontal: 31.r),
                     child: Text(
                       'К сожалению,\nна данный момент приложение доступно только для учителей',
                       style: text.s18w7h24
@@ -60,9 +67,9 @@ class _RejectViewState extends State<RejectView> {
                       textAlign: TextAlign.center,
                     ),
                   ),
-                  const SizedBox(height: 16),
+                  SizedBox(height: 16.h),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 31),
+                    padding: EdgeInsets.symmetric(horizontal: 31.r),
                     child: Text(
                       'Если у вас возникли вопросы, напишите нам, используя форму обратной связи.',
                       style: text.s16w5h22
@@ -73,7 +80,7 @@ class _RejectViewState extends State<RejectView> {
                 ],
               ),
               Padding(
-                padding: const EdgeInsets.all(16),
+                padding: EdgeInsets.all(16.r),
                 child: Column(
                   children: [
                     MtButton(
@@ -81,7 +88,7 @@ class _RejectViewState extends State<RejectView> {
                       onTap: _exit,
                       colors: appTheme.primaryButtonColors,
                     ),
-                    const SizedBox(height: 12),
+                    SizedBox(height: 12.h),
                     MtButton(
                       label: 'Написать нам',
                       onTap: _contactUs,

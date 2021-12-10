@@ -2,6 +2,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:mos_teacher/app/asset/asset.dart';
 import 'package:mos_teacher/app/theme/app_theme.dart';
@@ -89,24 +90,32 @@ class _LoginViewState extends State<LoginView> {
           child: Stack(
             alignment: AlignmentDirectional.bottomCenter,
             children: [
-              Image.asset(Asset.png.loginBackground),
+              Image.asset(
+                Asset.png.loginBackground,
+                width: double.infinity,
+                fit: BoxFit.fitWidth,
+              ),
               SafeArea(
                 child: Padding(
-                  padding: const EdgeInsets.fromLTRB(16, 24, 16, 16),
+                  padding: EdgeInsets.fromLTRB(16.r, 24.r, 16.r, 16.r),
                   child: Column(
                     children: [
-                      SvgPicture.asset(Asset.svg.textMesh),
-                      const SizedBox(height: 45),
+                      SvgPicture.asset(
+                        Asset.svg.textMesh,
+                        width: 112.r,
+                        height: 32.r,
+                      ),
+                      SizedBox(height: 45.h),
                       LoginButton(
                         onTap: () => _login(context),
                       ),
-                      const SizedBox(height: 32),
+                      SizedBox(height: 32.h),
                       LinkButton(
                         svgAsset: Asset.svg.iconMessageCircle,
                         text: 'Написать нам',
                         onTap: _support,
                       ),
-                      const SizedBox(height: 12),
+                      SizedBox(height: 12.h),
                       LinkButton(
                         svgAsset: Asset.svg.iconInfo,
                         text: 'Инструкция',

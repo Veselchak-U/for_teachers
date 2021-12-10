@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mos_teacher/app/navigator/route_generator.dart';
 import 'package:mos_teacher/app/theme/app_theme.dart';
 import 'package:mos_teacher/app/theme/light_theme.dart';
@@ -45,7 +46,7 @@ class AppState extends State<App> {
     }
 
     final AppTheme appTheme = LightTheme();
-    final Widget app = MaterialApp(
+    Widget app = MaterialApp(
       theme: appTheme.theme,
       locale: const Locale('ru', 'RU'),
       localizationsDelegates: const [
@@ -53,13 +54,24 @@ class AppState extends State<App> {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: const [Locale('ru', 'RU')],
+      builder: (context, widget) => MediaQuery(
+        // not change with system font size
+        data: MediaQuery.of(context).copyWith(textScaleFactor: 1),
+        child: widget ?? const SizedBox.shrink(),
+      ),
       onGenerateRoute: RouteGenerator.onGenerateRoute,
     );
 
     // application theme
-    return AppThemeWidget(
+    app = AppThemeWidget(
       appTheme: appTheme,
       child: app,
+    );
+
+    // adapting screen and font size
+    return ScreenUtilInit(
+      designSize: const Size(375, 812),
+      builder: () => app,
     );
   }
 }

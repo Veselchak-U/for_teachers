@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:mos_teacher/app/asset/asset.dart';
 import 'package:mos_teacher/app/theme/app_theme.dart';
@@ -71,18 +72,31 @@ class _WelcomeViewState extends State<WelcomeView> {
             alignment: AlignmentDirectional.bottomCenter,
             children: [
               AnimatedSwitcher(
-                duration: const Duration(milliseconds: 500),
-                child: (pictureUrl?.isNotEmpty == true)
-                    ? MtImage(pictureUrl)
-                    : Image.asset(Asset.png.welcomeBackground),
+                duration: const Duration(milliseconds: 1000),
+                child: (pictureUrl == null)
+                    ? const SizedBox(width: double.infinity)
+                    : (pictureUrl?.isNotEmpty == true)
+                        ? MtImage(
+                            pictureUrl,
+                            width: double.infinity,
+                          )
+                        : Image.asset(
+                            Asset.png.welcomeBackground,
+                            width: double.infinity,
+                            fit: BoxFit.fitWidth,
+                          ),
               ),
               SafeArea(
                 child: Padding(
-                  padding: const EdgeInsets.fromLTRB(16, 24, 16, 16),
+                  padding: EdgeInsets.fromLTRB(16.r, 24.r, 16.r, 16.r),
                   child: Column(
                     children: [
-                      SvgPicture.asset(Asset.svg.textMesh),
-                      const SizedBox(height: 48),
+                      SvgPicture.asset(
+                        Asset.svg.textMesh,
+                        width: 112.r,
+                        height: 32.r,
+                      ),
+                      SizedBox(height: 48.h),
                       AnimatedSwitcher(
                         duration: const Duration(milliseconds: 500),
                         child: (userName?.isNotEmpty == true)
@@ -92,9 +106,9 @@ class _WelcomeViewState extends State<WelcomeView> {
                                     color: appTheme.theme.backgroundColor),
                                 textAlign: TextAlign.center,
                               )
-                            : const SizedBox(height: 64),
+                            : SizedBox(height: 64.h),
                       ),
-                      const SizedBox(height: 16),
+                      SizedBox(height: 16.h),
                       Text(
                         'Сегодня ${_today(context)}',
                         style: text.s18w4h24

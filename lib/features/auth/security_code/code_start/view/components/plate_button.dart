@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:mos_teacher/app/theme/app_theme.dart';
 
@@ -23,7 +24,7 @@ class PlateButton extends StatelessWidget {
     final theme = AppTheme.of(context);
     final colors = theme.loginButtonColors;
     return Container(
-      height: 78,
+      height: 78.h,
       decoration: BoxDecoration(
         color: colors.background,
         borderRadius: borderRadius,
@@ -35,15 +36,15 @@ class PlateButton extends StatelessWidget {
           splashColor: Colors.white,
           borderRadius: borderRadius,
           child: Padding(
-            padding: const EdgeInsets.only(left: 16, right: 16),
+            padding: EdgeInsets.only(left: 16.r, right: 16.r),
             child: Row(
               children: [
                 SvgPicture.asset(
                   svgIconAsset,
-                  height: 40,
-                  width: 40,
+                  height: 40.r,
+                  width: 40.r,
                 ),
-                const SizedBox(width: 12),
+                SizedBox(width: 12.w),
                 Expanded(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -60,8 +61,8 @@ class PlateButton extends StatelessWidget {
                     ],
                   ),
                 ),
-                const SizedBox(width: 16),
-                Icon(Icons.arrow_forward_ios, size: 16, color: colors.arrow),
+                SizedBox(width: 16.w),
+                Icon(Icons.arrow_forward_ios, size: 16.r, color: colors.arrow),
               ],
             ),
           ),

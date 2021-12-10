@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mos_teacher/app/theme/app_theme.dart';
 
 class MtButton extends StatelessWidget {
@@ -21,13 +22,13 @@ class MtButton extends StatelessWidget {
     final background = colors?.background ?? Colors.white;
     final border =
         colors?.border != null ? Border.all(color: colors!.border!) : null;
-    final borderRadius = BorderRadius.circular(12);
+    final borderRadius = BorderRadius.circular(12.r);
     final textColor = colors?.text ?? Colors.black;
     final button = Stack(
       alignment: Alignment.center,
       children: [
         Container(
-          height: 48,
+          height: 48.h,
           decoration: BoxDecoration(
             color: background,
             border: border,
@@ -47,7 +48,7 @@ class MtButton extends StatelessWidget {
               )),
         ),
         if (progress == true)
-          const CircularProgressIndicator(strokeWidth: 2)
+          CircularProgressIndicator(strokeWidth: 2.r)
         else
           const SizedBox.shrink(),
       ],

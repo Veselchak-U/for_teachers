@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mos_teacher/app/theme/app_theme.dart';
 import 'package:mos_teacher/features/main_scene/bloc/main_scene_cubit.dart';
 
@@ -39,7 +40,7 @@ class MainSceneView extends StatelessWidget {
             onPressed: () => context.read<CounterCubit>().increment(),
             child: const Icon(Icons.add),
           ),
-          const SizedBox(height: 8),
+          SizedBox(height: 8.h),
           FloatingActionButton(
             onPressed: () => context.read<CounterCubit>().decrement(),
             child: const Icon(Icons.remove),

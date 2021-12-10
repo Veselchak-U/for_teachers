@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mos_teacher/app/asset/asset.dart';
 import 'package:mos_teacher/app/theme/app_theme.dart';
 import 'package:mos_teacher/app/view/components/appbar/app_bar.dart';
@@ -46,7 +47,7 @@ class _CodeStartViewState extends State<CodeStartView> {
           body: Stack(
             children: [
               Container(
-                height: 12,
+                height: 12.h,
                 color: appTheme.theme.primaryColorDark,
               ),
               Column(
@@ -58,14 +59,15 @@ class _CodeStartViewState extends State<CodeStartView> {
                         title: 'Код-пароль',
                         subTitle: 'Назначить код-пароль',
                         svgIconAsset: Asset.svg.iconLockClose,
-                        borderRadius: const BorderRadius.vertical(
-                            top: Radius.circular(12)),
+                        borderRadius: BorderRadius.vertical(
+                          top: Radius.circular(12.r),
+                        ),
                         onTap: _setCode,
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 62, right: 16),
+                        padding: EdgeInsets.only(left: 62.r, right: 16.r),
                         child: Container(
-                          height: 1,
+                          height: 1.h,
                           color: Colors.black,
                         ),
                       ),
@@ -73,8 +75,9 @@ class _CodeStartViewState extends State<CodeStartView> {
                         title: 'Не устанавливать защиту',
                         subTitle: 'Вход в приложение без пароля',
                         svgIconAsset: Asset.svg.iconLockOpen,
-                        borderRadius: const BorderRadius.vertical(
-                            bottom: Radius.circular(12)),
+                        borderRadius: BorderRadius.vertical(
+                          bottom: Radius.circular(12.r),
+                        ),
                         onTap: _dontSetCode,
                       ),
                     ],
@@ -83,18 +86,20 @@ class _CodeStartViewState extends State<CodeStartView> {
                     alignment: AlignmentDirectional.bottomCenter,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 40, vertical: 21),
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 40.r,
+                          vertical: 21.r,
+                        ),
                         child: Image.asset(Asset.png.codeStartBackground),
                       ),
                       Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 16),
+                        padding: EdgeInsets.symmetric(horizontal: 16.r),
                         child: Container(
-                          height: 76,
-                          padding: const EdgeInsets.all(16),
+                          height: 76.h,
+                          padding: EdgeInsets.all(16.r),
                           decoration: BoxDecoration(
                             color: appTheme.labelColors.blue20,
-                            borderRadius: BorderRadius.circular(8),
+                            borderRadius: BorderRadius.circular(8.r),
                           ),
                           child: Text(
                             'Рекомендуем защитить приложение, установив надежный код-пароль',

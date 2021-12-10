@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ErrorScreen extends StatelessWidget {
   const ErrorScreen(this.error, {Key? key}) : super(key: key);
@@ -11,7 +12,7 @@ class ErrorScreen extends StatelessWidget {
       child: Directionality(
         textDirection: TextDirection.ltr,
         child: SingleChildScrollView(
-          padding: const EdgeInsets.all(24),
+          padding: EdgeInsets.all(24.r),
           child: Text(error),
         ),
       ),

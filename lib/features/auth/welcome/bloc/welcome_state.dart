@@ -17,15 +17,11 @@ class WelcomeStateGotBackground extends WelcomeState {
   final String url;
 }
 
-class WelcomeStateNoBackground extends WelcomeState {}
-
 class WelcomeStateGotUser extends WelcomeState {
   const WelcomeStateGotUser(this.userName);
 
   final String userName;
 }
-
-class WelcomeStateNoUser extends WelcomeState {}
 
 class WelcomeStateError extends WelcomeState {
   const WelcomeStateError(this.error);
